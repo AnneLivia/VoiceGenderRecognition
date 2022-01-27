@@ -1,13 +1,17 @@
 # Voice Gender Recognition
 
-In this project it was used some different Machine Learning models to identify the gender of a voice (Female or Male) based on some specific speech and voice attributes.
+### In this project, it was used different Machine Learning models to identify the gender of a voice (Female or Male) based on some specific speech and voice attributes.
+
+<p align="center"><img src="data/signal.gif" width="100%" height="100%"/></p>
+<h6 align="center">Image obtained from <a href="https://giphy.com/scenes">GIF By Scenes.</a></h6>
+
 
 ### Models implemented by <a href="https://github.com/AnneLivia">Anne Livia</a>.
 
 ## Dataset Information:
 
 - This dataset was obtained from Kaggle on <a href="https://www.kaggle.com/primaryobjects/voicegender"/> this link </a> by <a href="https://www.kaggle.com/primaryobjects"/>Kory Becker</a> and was created to identify a voice as male or female, based upon acoustic properties of the voice and speech. 
-- The dataset consists of 3,168 recorded voice samples, collected from male and female speakers. The voice samples are pre-processed by acoustic analysis in R using the seewave and tuneR packages, with an analyzed frequency range of 0hz-280hz (human vocal range).
+- The dataset consists of **3,168** recorded voice samples, collected from **male and female speakers**. The voice samples are pre-processed by acoustic analysis in R using the seewave and tuneR packages, with an analyzed frequency range of 0hz-280hz (human vocal range).
 
 ### Properties:
 
@@ -33,50 +37,62 @@ In this project it was used some different Machine Learning models to identify t
   - **modindx:** modulation index. Calculated as the accumulated absolute difference between adjacent measurements of fundamental ---- **frequencies divided by the frequency range
   - **label:** male or female
 
-# Software Informations
+# Software Information
+
   - Python
+  - Pandas
   - Scikit-learn
   - Matplotlib
   - Seaborn
+  - XGBoost
 
 # Trained Models 
+
   - <h3>Decision Tree Model</h3>
   
-    - **Acurracy**: 0.9652996845425867
-    - **Precision**: 0.9715189873417721
-    - **Recall**: 0.959375
-    - **F1-Score**: 0.9654088050314465
-    - **Confusion Matrix, Feature Importance, and Precision-Recall Curve respectively**: 
-    
-      <img src="fig/dt_plots.PNG" alt="plots for decision tree model"/>
-      
+                      precision    recall  f1-score   support
+
+            0              0.96      0.97      0.97       314
+            1              0.97      0.96      0.97       320
+
+            accuracy                           0.97       634
+            macro avg      0.97      0.97      0.97       634
+            weighted avg   0.97      0.97      0.97       634
+
+          
+   
   - <h3>Random Forest Model</h3>
   
-    - **Acurracy**:  0.9810725552050473
-    - **Precision**:  0.9842767295597484
-    - **Recall**:  0.978125
-    - **F1-Score**:  0.9811912225705329
-    - **Confusion Matrix, Feature Importance, and Precision-Recall Curve respectively**: 
+                      precision    recall  f1-score   support
+
+            0              0.98      0.98      0.98       314
+            1              0.98      0.98      0.98       320
+
+            accuracy                           0.98       634
+            macro avg      0.98      0.98      0.98       634
+            weighted avg   0.98      0.98      0.98       634
     
-      <img src="fig/rf_plots.PNG" alt="plots for random forest"/>
-  
   - <h3>Extra Tree Model</h3>
   
-    - **Acurracy**:  0.9873817034700315
-    - **Precision**:  0.9905660377358491
-    - **Recall**:  0.984375
-    - **F1-Score**:  0.9874608150470221
-    - **Confusion Matrix, Feature Importance, and Precision-Recall Curve respectively**: 
-    
-      <img src="fig/ex_plots.PNG" alt="plots for extra tree"/>
-  
+                      precision    recall  f1-score   support
+
+            0              0.98      0.99      0.99       314
+            1              0.99      0.98      0.99       320
+
+            accuracy                           0.99       634
+            macro avg      0.99      0.99      0.99       634
+            weighted avg   0.99      0.99      0.99       634
+
   - <h3>XGBoost model</h3>
   
-    - **Acurracy**:  0.9873817034700315
-    - **Precision**:  0.9905660377358491
-    - **Recall**:  0.984375
-    - **F1-Score**:  0.9874608150470221
-    - **Confusion Matrix, Feature Importance, and Precision-Recall Curve respectively**: 
-    
-      <img src="fig/xgb_plots.PNG" alt="plots for xgboost"/>  
+                      precision    recall  f1-score   support
+
+           0              0.98      0.99      0.99       314
+           1              0.99      0.98      0.99       320
+
+           accuracy                           0.99       634
+           macro avg      0.99      0.99      0.99       634
+           weighted avg   0.99      0.99      0.99       634
+
+  
       
